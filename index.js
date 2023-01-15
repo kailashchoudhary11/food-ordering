@@ -46,7 +46,7 @@ function handleAddClick(itemId) {
 }
 
 function handleRemoveClick(itemName) {
-    console.log(itemName);
+    totalPrice -= yourOrder[itemName];
     delete yourOrder[itemName];
     render();
 }
