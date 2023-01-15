@@ -61,37 +61,38 @@ function getMenuHtml() {
     menuArray.forEach(menu => {
         menuHtml += `
             <div class="item">
-                <span>${menu.emoji}</span>
-                <div>
-                    <span>${menu.name}</span>
-                    <span>${menu.ingredients}</span>
-                    <span>${menu.price}</span>
+                <div class="item-img">${menu.emoji}</div>
+                <div class="item-details">
+                    <div class="item-name">${menu.name}</div>
+                    <div class="item-ingredients">${menu.ingredients}</div>
+                    <div class="item-price">$${menu.price}</div>
                 </div>
-                <button class="add-btn" data-add="${menu.id}">+</button>
+                <button class="item-add-btn" data-add="${menu.id}">+</button>
             </div>
+            <hr class="item-end">
         `;
     });
     return menuHtml;
 }
 
 function getOrderHtml() {
-    let orderHtml = Object.keys(yourOrder).length > 0 ? '<h3>Your Order</h3>' : '';
+    let orderHtml = Object.keys(yourOrder).length > 0 ? '<h3 class="order-title">Your Order</h3>' : '';
     for (const key in yourOrder) {
         orderHtml += `
-            <div>
-                <span>${key}</span>
-                <button data-remove="${key}">Remove</button>
-                <span>$${yourOrder[key]}</span>
+            <div class="order-item">
+                <div class="order-name">${key}</div>
+                <button class="item-remove-btn" data-remove="${key}">Remove</button>
+                <div class="order-price">$${yourOrder[key]}</div>
             </div>
         `
     }
     orderHtml += Object.keys(yourOrder).length > 0 ? `
-        <hr>
-        <div>
-            <span>Total Price: </span>
-            <span>$${totalPrice}</span>
+        <hr class="order-total-line">
+        <div class="order-total">
+            <div class="total-text">Total Price: </div>
+            <div class="total-price">$${totalPrice}</div>
         </div>
-        <button id="complete-order">Complete order</button>
+        <button id="complete-order" class="checkout-btn">Complete order</button>
     ` : '';
 
     return orderHtml;

@@ -1,20 +1,156 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    font-family: 'Smythe';
 }
 
 .header {
     background-image: url("./images/bg-img.png");
     background-repeat: no-repeat;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     color: white;
+    width: 600px;
+    height: 167px;
+    padding: 46px;
 }
 
-.add-btn {
+.header-title {
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 24px;
+}
+
+.header-subtitle {
+    margin-top: 19px;
+    font-weight: 400;
+    font-size: 22.4216px;
+    line-height: 14px;
+}
+
+#menu {
+    padding: 0px 46px;
+    width: 510px;
+}
+
+.item {
+    display: flex;
+    gap: 31px;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.item-img {
+    font-size: 78.72px;
+    opacity: 0.72;
+    font-family: 'Inter';
+}
+
+.item-name {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 17px;
+}
+
+.item-ingredients {
+    font-weight: 400;
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+.item-price {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.item-add-btn {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 40px;
     border: 1.5px solid #DEDEDE;
+    font-size: 32px;
+    font-family: 'Inter';
+    text-align: center;
+    padding-bottom: 4px;
+    color: #3C3C3C;
+    margin-left: auto;
+}
+
+.item-end {
+    width: 504px;
+    height: 0px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #D2D2D2;
+}
+
+#order {
+    display: flex;
+    flex-direction: column;
+    width: 510px;
+    padding: 0 46px;
+    gap: 22px;
+}
+
+.order-title {
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.order-item, .order-total {
+    display: flex;
+    gap: 15px;
+}
+
+.order-name, .total-text {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.item-remove-btn {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #BBBBBB;
+    border: none;
+    background: white;
+}
+
+.order-price, .total-price {
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.order-total-line {
+    border: 2px solid #393333;
+    height: 0px;
+}
+
+.checkout-btn {
+    background: #16DB99;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    height: 60px;
+    border: none;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 30px 0px;
 }
 
 #checkout {
