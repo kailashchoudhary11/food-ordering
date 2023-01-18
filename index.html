@@ -12,41 +12,46 @@
     <title>Kai's Diner</title>
 </head>
 <body>
+    <div class="container">
     <header class="header">
         <h1 class="header-title">Kai's Diner</h1>
         <h4 class="header-subtitle">The best burgers and pizzas in town.</h4>
     </header>
     <main>
-        <div id="menu"></div>
-        <div id="order"></div>
-        <div id="checkout">
-            <h2>Enter card details</h2>
-            <form id="checkout-form">
-                <input 
-                    type="text" 
-                    name="name" 
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
-                <input 
-                    type="number" 
-                    name="card-number" 
-                    id="card-number"
-                    placeholder="Enter card number"
-                    required
-                >
-                <input 
-                    type="password" 
-                    name="cvv" 
-                    id="cvv"
-                    placeholder="Enter CVV"
-                    required
-                >
-                <button>Pay</button>
-            </form>
+
+            <div id="menu"></div>
+            <div id="order"></div>
+        <div class="modal" id="modal">
+            <div id="checkout" class="modal-content">
+                <h2 class="modal-title">Enter card details</h2>
+                <form id="checkout-form">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                    <input 
+                        type="number" 
+                        name="card-number" 
+                        id="card-number"
+                        placeholder="Enter card number"
+                        required
+                    >
+                    <input 
+                        type="password" 
+                        name="cvv" 
+                        id="cvv"
+                        placeholder="Enter CVV"
+                        required
+                    >
+                    <button class="pay-btn">Pay</button>
+                </form>
+            </div>
         </div>
     </main>
+</div>
     <script src="./index.js" type="module"></script>
 </body>
 </html>

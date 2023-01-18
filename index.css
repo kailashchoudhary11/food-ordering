@@ -1,172 +1,236 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Smythe';
+  margin: 0;
+  padding: 0;
+  font-family: "Smythe";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-    background-image: url("./images/bg-img.png");
-    background-repeat: no-repeat;
-    color: white;
-    width: 600px;
-    height: 167px;
-    padding: 46px;
+  background-image: url("./images/bg-img.png");
+  background-repeat: no-repeat;
+  color: white;
+  width: 600px;
+  height: 167px;
+  padding: 46px;
 }
 
 .header-title {
-    font-weight: 400;
-    font-size: 39px;
-    line-height: 24px;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 24px;
 }
 
 .header-subtitle {
-    margin-top: 19px;
-    font-weight: 400;
-    font-size: 22.4216px;
-    line-height: 14px;
+  margin-top: 19px;
+  font-weight: 400;
+  font-size: 22.4216px;
+  line-height: 14px;
 }
 
 #menu {
-    padding: 0px 46px;
-    width: 510px;
+  padding: 0px 46px;
+  width: 510px;
 }
 
 .item {
-    display: flex;
-    gap: 31px;
-    /* justify-content: center; */
-    align-items: center;
-    
+  display: flex;
+  gap: 31px;
+  align-items: center;
 }
 
 .item-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 }
 
 .item-img {
-    font-size: 78.72px;
-    opacity: 0.72;
-    font-family: 'Inter';
+  font-size: 78.72px;
+  opacity: 0.72;
+  font-family: "Inter";
 }
 
 .item-name {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 17px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
 }
 
 .item-ingredients {
-    font-weight: 400;
-    font-size: 16px;
-    color: #8B8B8B;
+  font-weight: 400;
+  font-size: 16px;
+  color: #8b8b8b;
 }
 
 .item-price {
-    font-weight: 400;
-    font-size: 20px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .item-add-btn {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 40px;
-    border: 1.5px solid #DEDEDE;
-    font-size: 32px;
-    font-family: 'Inter';
-    text-align: center;
-    padding-bottom: 4px;
-    color: #3C3C3C;
-    margin-left: auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 1.5px solid #dedede;
+  font-size: 32px;
+  font-family: "Inter";
+  text-align: center;
+  padding-bottom: 4px;
+  color: #3c3c3c;
+  margin-left: auto;
 }
 
 .item-end {
-    width: 504px;
-    height: 0px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    border: 1px solid #D2D2D2;
+  width: 504px;
+  height: 0px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: 1px solid #d2d2d2;
 }
 
 #order {
-    display: flex;
-    flex-direction: column;
-    width: 510px;
-    padding: 0 46px;
-    gap: 22px;
+  display: flex;
+  flex-direction: column;
+  width: 510px;
+  padding: 0 46px;
+  gap: 22px;
 }
 
 .order-title {
-    font-weight: 400;
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
-.order-item, .order-total {
-    display: flex;
-    gap: 15px;
+.order-item,
+.order-total {
+  display: flex;
+  gap: 15px;
 }
 
-.order-name, .total-text {
-    font-weight: 400;
-    font-size: 28px;
+.order-name,
+.total-text {
+  font-weight: 400;
+  font-size: 28px;
 }
 
 .item-remove-btn {
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
-    color: #BBBBBB;
-    border: none;
-    background: white;
-    cursor: pointer;
+  font-family: "Verdana";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #bbbbbb;
+  border: none;
+  background: white;
+  cursor: pointer;
 }
 
-.order-price, .total-price {
-    font-weight: 400;
-    font-size: 20px;
-    margin-left: auto;
+.order-price,
+.total-price {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: auto;
 }
 
 .order-total-line {
-    border: 2px solid #393333;
-    height: 0px;
+  border: 2px solid #393333;
+  height: 0px;
 }
 
-.checkout-btn {
-    background: #16DB99;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 3px;
-    height: 60px;
+.checkout-btn, .pay-btn {
+  background: #16db99;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  height: 60px;
+  border: none;
+  font-family: "Verdana";
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 30px 0px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  margin: auto;
+  width: 524px;
+  height: 542px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+
+.modal-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 47px;
+    margin-bottom: 47px;
+}
+
+input, .pay-btn {
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  margin-left: 22px;
+  padding: 10px;
+  width: 475px;
+  height: 71px;
+  font-family: 'Verdana';
+  font-size: 20px;
+}
+input {
+  font-weight: 400;
+  border: 1px solid #212529;
+  border-radius: 3px;
+  color: #757575;
+  
+}
+
+.pay-btn {
     border: none;
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-    margin: 30px 0px;
-    cursor: pointer;
+    color: white;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
-#checkout {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 420px;
-    width: 350px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 6px 2px #666;
-    background-color: #212529;
-    color: whitesmoke;
+.thanks {
+  width: 504px;
+  height: 120px;
+  font-weight: 400;
+  font-size: 32px;
+  color: #065F46;
+  background: #ECFDF5;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }

@@ -2,27 +2,10 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById('menu');
 const checkoutForm = document.getElementById('checkout-form');
-const checkout = document.getElementById('checkout');
 const order = document.getElementById('order');
+const modal = document.getElementById('modal')
 const yourOrder = {};
 let totalPrice = 0;
-
-checkoutForm.addEventListener('submit', event => {
-    event.preventDefault();
-    const formData = new FormData(checkoutForm);
-    const name = formData.get('name');
-    checkout.style.display = 'none';
-    for (const prop of Object.getOwnPropertyNames(yourOrder)) {
-        delete yourOrder[prop];
-    }
-    checkoutForm.reset();
-    render();
-    order.innerHTML = `
-        <div>
-            Thanks, ${name}! Your order is on its way!
-        </div>
-    `;
-})
 
 document.addEventListener('click', (event) => {
     if (event.target.dataset.add) {
@@ -52,9 +35,26 @@ function handleRemoveClick(itemName) {
 }
 
 function handleCompleteOrder(buttonId) {
-    checkout.style.display = 'block';
-    document.getElementById('complete-order').disabled = true;
+    modal.style.display = 'block';
 }
+
+checkoutForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const formData = new FormData(checkoutForm);
+    const name = formData.get('name');
+    for (const prop of Object.getOwnPropertyNames(yourOrder)) {
+        delete yourOrder[prop];
+    }
+
+    checkoutForm.reset();
+    render();
+    modal.style.display = "none";
+    order.innerHTML = `
+        <div class="thanks">
+            Thanks, ${name}! Your order is on its way!
+        </div>
+    `;
+})
 
 function getMenuHtml() {
     let menuHtml = '';
