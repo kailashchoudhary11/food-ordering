@@ -3,7 +3,7 @@ import { menuArray } from "./data.js";
 const menu = document.getElementById('menu');
 const checkoutForm = document.getElementById('checkout-form');
 const order = document.getElementById('order');
-const modal = document.getElementById('modal')
+const modal = document.getElementById('modal');
 const yourOrder = {};
 let totalPrice = 0;
 
@@ -48,6 +48,7 @@ checkoutForm.addEventListener('submit', event => {
 
     checkoutForm.reset();
     render();
+    total = 0;
     modal.style.display = "none";
     order.innerHTML = `
         <div class="thanks">
