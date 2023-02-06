@@ -42,14 +42,15 @@ checkoutForm.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(checkoutForm);
     const name = formData.get('name');
+    
     for (const prop of Object.getOwnPropertyNames(yourOrder)) {
         delete yourOrder[prop];
     }
 
     checkoutForm.reset();
     render();
-    total = 0;
     modal.style.display = "none";
+    total = 0;
     order.innerHTML = `
         <div class="thanks">
             Thanks, ${name}! Your order is on its way!
